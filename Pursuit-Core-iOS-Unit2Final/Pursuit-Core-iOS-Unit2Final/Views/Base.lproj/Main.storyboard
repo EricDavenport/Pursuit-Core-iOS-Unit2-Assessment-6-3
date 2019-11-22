@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Crayons-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TableViewController" customModule="Pursuit_Core_iOS_Unit2Final" customModuleProvider="target" sceneMemberID="viewController">
@@ -59,7 +59,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Eph-Lb-glA"/>
+                    <navigationItem key="navigationItem" title="Crayons" id="Eph-Lb-glA"/>
                     <connections>
                         <outlet property="tableView" destination="cKj-J0-EuT" id="pDs-af-Qyd"/>
                     </connections>
@@ -85,7 +85,7 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UKt-EV-awq">
                                 <rect key="frame" x="6" y="121" width="402" height="31"/>
                                 <connections>
-                                    <action selector="redSLiderWithSender:" destination="JKN-Qh-YQm" eventType="valueChanged" id="i1e-iX-BOE"/>
+                                    <action selector="redSliderWithSender:" destination="JKN-Qh-YQm" eventType="valueChanged" id="i1e-iX-BOE"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cu6-7Q-bhN">

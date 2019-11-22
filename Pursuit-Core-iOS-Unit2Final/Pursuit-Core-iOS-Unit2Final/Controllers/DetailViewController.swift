@@ -46,6 +46,11 @@ class DetailViewController: UIViewController {
         }
     }
     
+//    init(red: Float, green: Float, blue: Float) {
+//        self.redValue = Float(currentColor!.red)
+//        self.greenValue = Float(currentColor!.green)
+//        self.blueValue = Float(currentColor!.blue)
+//    }
     
     
     override func viewDidLoad() {
@@ -89,11 +94,14 @@ class DetailViewController: UIViewController {
         alphaLabel.text = String(format: "%.01f", alphaStepper.value)
     }
     
-    
-    @IBAction func redSLider(sender: UISlider) {
-        redValue = sender.value
-        
+    func changeBackgroundColor() {
         self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
+    }
+    
+    @IBAction func redSlider(sender: UISlider) {
+        redValue = sender.value
+        //changeBackgroundColor()
+       self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
     }
     
     @IBAction func greenSlider(sender: UISlider) {

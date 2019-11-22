@@ -92,18 +92,26 @@ class DetailViewController: UIViewController {
     
     @IBAction func redSLider(sender: UISlider) {
         redValue = sender.value
+        
+        self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
     }
     
     @IBAction func greenSlider(sender: UISlider) {
         greenValue = sender.value
+        
+        self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
     }
     
     @IBAction func blueSlider(sender: UISlider) {
         blueValue = sender.value
+        
+        self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
     }
     
     @IBAction func alphaStepper(sender: UIStepper) {
         alphaValue = sender.value
+        
+        self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
     }
     
     @IBAction func resetMe(sender: UIButton) {
@@ -111,6 +119,8 @@ class DetailViewController: UIViewController {
         configureRedSLider()
         configureGreenSlider()
         configureBlueSLider()
+        
+        self.view.backgroundColor = UIColor(displayP3Red: CGFloat(currentColor!.red / 255), green: CGFloat(currentColor!.green / 255), blue: CGFloat(currentColor!.blue / 255), alpha: 1.0)
 
     }
     

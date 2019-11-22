@@ -46,47 +46,36 @@ class DetailViewController: UIViewController {
         }
     }
     
-//    init(red: Float, green: Float, blue: Float) {
-//        self.redValue = Float(currentColor!.red)
-//        self.greenValue = Float(currentColor!.green)
-//        self.blueValue = Float(currentColor!.blue)
-//    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureRedSLider()
-        configureGreenSlider()
-        configureBlueSLider()
-        configureStepper()
+        configureScreen()
         self.view.backgroundColor = UIColor(displayP3Red: CGFloat(currentColor!.red / 255), green: CGFloat(currentColor!.green / 255), blue: CGFloat(currentColor!.blue / 255), alpha: 1.0)
         title = currentColor?.name
+
         
+        if currentColor?.name == "Black" {
+            redLabel.textColor = .white
+            greenLabel.textColor = .white
+            blueLabel.textColor = .white
+            alphaLabel.textColor = .white
+        }
     }
-    
-    func configureRedSLider() {
+ 
+    func configureScreen() {
         redSlider.maximumValue = 1.0
         redSlider.minimumValue = 0.0
         redSlider.value = Float(currentColor!.red / 255)
         redLabel.text = String(format: "%.02f", redSlider.value)
-        
-    }
-    
-    func configureGreenSlider() {
         greenSlider.maximumValue = 1.0
         greenSlider.minimumValue = 0.0
         greenSlider.value = Float(currentColor!.green / 255)
         greenLabel.text = String(format: "%.02f", greenSlider.value)
-    }
-    
-    func configureBlueSLider() {
         blueSlider.maximumValue = 1.0
         blueSlider.minimumValue = 0.0
         blueSlider.value = Float(currentColor!.blue / 255)
         blueLabel.text = String(format: "%.02f", blueSlider.value)
-    }
-    
-    func configureStepper() {
         alphaStepper.stepValue = 0.1
         alphaStepper.value = 1.0
         alphaStepper.maximumValue = 1.0
@@ -94,42 +83,52 @@ class DetailViewController: UIViewController {
         alphaLabel.text = String(format: "%.01f", alphaStepper.value)
     }
     
-    func changeBackgroundColor() {
-        self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
+    func changeWordColor() {
+        if redValue < 0.5 && greenValue < 0.5 && blueValue < 0.5 && alphaValue < 0.5 {
+            redLabel.textColor = .white
+            greenLabel.textColor = .white
+            blueLabel.textColor = .white
+            alphaLabel.textColor = .white
+        } else {
+            redLabel.textColor = .black
+            greenLabel.textColor = .black
+            blueLabel.textColor = .black
+            alphaLabel.textColor = .black
+        }
     }
     
     @IBAction func redSlider(sender: UISlider) {
         redValue = sender.value
-        //changeBackgroundColor()
-       self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
+        self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
+        changeWordColor()
     }
     
     @IBAction func greenSlider(sender: UISlider) {
         greenValue = sender.value
         
         self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
+        changeWordColor()
     }
     
     @IBAction func blueSlider(sender: UISlider) {
         blueValue = sender.value
         
         self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
+        changeWordColor()
     }
     
     @IBAction func alphaStepper(sender: UIStepper) {
         alphaValue = sender.value
         
         self.view.backgroundColor = UIColor(displayP3Red: CGFloat(redValue), green: CGFloat(greenValue), blue: CGFloat(blueValue), alpha: CGFloat(alphaValue))
+        changeWordColor()
     }
     
     @IBAction func resetMe(sender: UIButton) {
-        configureStepper()
-        configureRedSLider()
-        configureGreenSlider()
-        configureBlueSLider()
+        configureScreen()
         
         self.view.backgroundColor = UIColor(displayP3Red: CGFloat(currentColor!.red / 255), green: CGFloat(currentColor!.green / 255), blue: CGFloat(currentColor!.blue / 255), alpha: 1.0)
-
+        
     }
     
 }

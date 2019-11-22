@@ -77,19 +77,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ylx-E7-NpS">
-                                <rect key="frame" x="6" y="287" width="402" height="31"/>
+                                <rect key="frame" x="18" y="287" width="378" height="31"/>
                                 <connections>
                                     <action selector="greenSliderWithSender:" destination="JKN-Qh-YQm" eventType="valueChanged" id="NgS-hx-dnE"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UKt-EV-awq">
-                                <rect key="frame" x="6" y="121" width="402" height="31"/>
+                                <rect key="frame" x="18" y="121" width="378" height="31"/>
                                 <connections>
                                     <action selector="redSliderWithSender:" destination="JKN-Qh-YQm" eventType="valueChanged" id="i1e-iX-BOE"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cu6-7Q-bhN">
-                                <rect key="frame" x="6" y="453" width="402" height="31"/>
+                                <rect key="frame" x="18" y="453" width="378" height="31"/>
                                 <connections>
                                     <action selector="blueSliderWithSender:" destination="JKN-Qh-YQm" eventType="valueChanged" id="yOk-wf-gft"/>
                                 </connections>
@@ -137,20 +137,20 @@
                         <constraints>
                             <constraint firstItem="zCv-mY-pb3" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="8" id="4SQ-eV-flI"/>
                             <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="Bw9-Ye-MV0" secondAttribute="trailing" constant="8" id="5dz-Dv-v62"/>
-                            <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="Cu6-7Q-bhN" secondAttribute="trailing" constant="8" id="C8S-P0-sDj"/>
-                            <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="UKt-EV-awq" secondAttribute="trailing" constant="8" id="GKK-ZH-qzJ"/>
+                            <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="Cu6-7Q-bhN" secondAttribute="trailing" constant="20" id="C8S-P0-sDj"/>
+                            <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="UKt-EV-awq" secondAttribute="trailing" constant="20" id="GKK-ZH-qzJ"/>
                             <constraint firstItem="zCv-mY-pb3" firstAttribute="top" secondItem="UKt-EV-awq" secondAttribute="bottom" constant="15" id="Nd6-by-rWl"/>
                             <constraint firstItem="QUO-3c-bKy" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="8" id="PBP-Il-yxl"/>
-                            <constraint firstItem="Cu6-7Q-bhN" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="8" id="Q7G-2F-806"/>
+                            <constraint firstItem="Cu6-7Q-bhN" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="20" id="Q7G-2F-806"/>
                             <constraint firstItem="vGc-17-EmM" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="8" id="R1Z-3w-iqd"/>
                             <constraint firstItem="hzv-HT-HhI" firstAttribute="top" secondItem="Bw9-Ye-MV0" secondAttribute="bottom" constant="100" id="SCS-9E-5vy"/>
                             <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="zCv-mY-pb3" secondAttribute="trailing" constant="8" id="Saj-Z4-mdb"/>
                             <constraint firstItem="Cu6-7Q-bhN" firstAttribute="top" secondItem="QUO-3c-bKy" secondAttribute="bottom" constant="100" id="WD9-dm-hou"/>
                             <constraint firstItem="QUO-3c-bKy" firstAttribute="top" secondItem="ylx-E7-NpS" secondAttribute="bottom" constant="15" id="WNF-rJ-M9k"/>
                             <constraint firstItem="ylx-E7-NpS" firstAttribute="top" secondItem="zCv-mY-pb3" secondAttribute="bottom" constant="100" id="Xn5-FK-3tF"/>
-                            <constraint firstItem="UKt-EV-awq" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="8" id="bkF-Sm-Sjy"/>
-                            <constraint firstItem="ylx-E7-NpS" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="8" id="cvW-Or-bGC"/>
-                            <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="ylx-E7-NpS" secondAttribute="trailing" constant="8" id="dOS-xG-fas"/>
+                            <constraint firstItem="UKt-EV-awq" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="20" id="bkF-Sm-Sjy"/>
+                            <constraint firstItem="ylx-E7-NpS" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="20" id="cvW-Or-bGC"/>
+                            <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="ylx-E7-NpS" secondAttribute="trailing" constant="20" id="dOS-xG-fas"/>
                             <constraint firstItem="D36-6a-LJ2" firstAttribute="trailing" secondItem="QUO-3c-bKy" secondAttribute="trailing" constant="8" id="dOr-Ri-sOM"/>
                             <constraint firstItem="Bw9-Ye-MV0" firstAttribute="leading" secondItem="D36-6a-LJ2" secondAttribute="leading" constant="8" id="fCC-oX-Zpg"/>
                             <constraint firstItem="vGc-17-EmM" firstAttribute="top" secondItem="hzv-HT-HhI" secondAttribute="bottom" constant="15" id="oSF-CF-juH"/>

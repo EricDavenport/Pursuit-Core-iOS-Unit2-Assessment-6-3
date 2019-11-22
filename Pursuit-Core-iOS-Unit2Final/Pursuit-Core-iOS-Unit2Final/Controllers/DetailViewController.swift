@@ -20,8 +20,33 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var alphaLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
     
-    
     var currentColor: Crayon?
+    
+    var redValue: Float = 0.2 {
+        didSet {
+            redLabel.text = String(format: "%.02f", redSlider.value)
+        }
+    }
+    
+    var greenValue: Float = 0.2 {
+        didSet {
+            greenLabel.text = String(format: "%.02f", greenSlider.value)
+        }
+    }
+    
+    var blueValue: Float = 0.2 {
+        didSet {
+            blueLabel.text = String(format: "%.02f", blueSlider.value)
+        }
+    }
+    
+    var alphaValue: Double = 1.0 {
+        didSet {
+            alphaLabel.text = String(format: "%.01f", alphaStepper.value)
+        }
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +64,7 @@ class DetailViewController: UIViewController {
         redSlider.minimumValue = 0.0
         redSlider.value = Float(currentColor!.red / 255)
         redLabel.text = String(format: "%.02f", redSlider.value)
+        
     }
     
     func configureGreenSlider() {
@@ -60,30 +86,32 @@ class DetailViewController: UIViewController {
         alphaStepper.value = 1.0
         alphaStepper.maximumValue = 1.0
         alphaStepper.minimumValue = 0.0
-        alphaLabel.text = String(format: "%.02f", alphaStepper.value)
-        
-        //  sliderLabel.text = String(format: "%0.f", sliderControl.value)
+        alphaLabel.text = String(format: "%.01f", alphaStepper.value)
     }
     
     
     @IBAction func redSLider(sender: UISlider) {
-        
+        redValue = sender.value
     }
     
     @IBAction func greenSlider(sender: UISlider) {
-        
+        greenValue = sender.value
     }
     
     @IBAction func blueSlider(sender: UISlider) {
-        
+        blueValue = sender.value
     }
     
     @IBAction func alphaStepper(sender: UIStepper) {
-        
+        alphaValue = sender.value
     }
     
     @IBAction func resetMe(sender: UIButton) {
-        
+        configureStepper()
+        configureRedSLider()
+        configureGreenSlider()
+        configureBlueSLider()
+
     }
     
 }
